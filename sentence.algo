@@ -1,0 +1,18 @@
+ALGORITHM sentence
+VAR
+    c: char
+    nbchar:INTEGER:=0;
+    nbword:INTEGER:=0;
+    nbvoyel:INTEGER:=0;
+BEGIN
+    WHILE (c<>".") DO
+        nbchar=nbchar+1;
+        IF c in ["a","e","i","y","A","E","I","Y"] THEN
+            nbvoyel=nbvoyel+1;
+        END_IF
+        IF (c= " ") THEN
+        nbword=nbword+1;
+        END_IF
+    END_WHILE
+    write(nbchar,nbvoyel,nbword);
+END
